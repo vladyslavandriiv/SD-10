@@ -1,0 +1,13 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head><meta charset="UTF-8"><title>Головна</title></head>
+<body>
+  <h1>Ласкаво просимо, {{ user.username }}!</h1>
+  {% if user.is_authenticated %}
+    <p>Ви успішно авторизовані.</p>
+  {% else %}
+    <p><a href="{% url 'register' %}">Зареєструватися</a></p>
+  {% endif %}
+</body>
+</html>
